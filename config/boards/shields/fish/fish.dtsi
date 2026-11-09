@@ -24,6 +24,8 @@
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
         diode-direction = "row2col";
+        // キーを押してディープスリープから復帰できるようにする
+        wakeup-source;
     };
 
 };
