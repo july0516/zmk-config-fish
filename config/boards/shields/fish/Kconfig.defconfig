@@ -5,6 +5,8 @@
 if SHIELD_FISH_LEFT
 # 右親機にしたければ "if SHIELD_FISH_RIGHT" にする
 # Eyelash ドングルを使う場合、左も子機としてビルドされる（build.yaml の fish_left_peripheral）
+# ※右親機に変えた場合、ドングル構成では右も子機にする必要がある：
+#   build.yaml で fish_right に "cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n" を付けた行を追加する
 
 config ZMK_KEYBOARD_NAME
     default "Fish Keyboard"

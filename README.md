@@ -16,10 +16,10 @@ GitHub Actions でビルドされるファームウェアのうち、次の3つ�
 
 | 書き込み先 | ファームウェア |
 | --- | --- |
-| ドングル | `fish_dongle` |
-| 左 | `fish_left_peripheral` |
-| 右 | `fish_right`（ドングルなしの時と同じ） |
+| ドングル | `fish_dongle.uf2` |
+| 左 | `fish_left_peripheral.uf2` |
+| 右 | `fish_right-xiao_ble_zmk-zmk.uf2`（ドングルなしの時と同じ） |
 
-ドングルなしの構成から切り替える時は、3台とも先に `settings_reset`（ドングルは `settings_reset-nice_nano`）を書き込んでペアリング情報を消してください。  
+ドングルなしの構成から切り替える時は、3台とも先にリセット用のファームウェアを書き込んでペアリング情報を消してください（左右は `settings_reset-xiao_ble_zmk-zmk.uf2`、ドングルは `settings_reset-nice_nano.uf2`）。  
 ### [fish_dongle.conf](config/fish_dongle.conf)
 ドングルの挙動や画面表示を設定できます。
